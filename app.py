@@ -190,12 +190,12 @@ def page_enquiry():
         st.markdown("##### Draf jawapan (semak dan ubah sebelum hantar)")
         reply = st.text_area("Draf", value=draft_reply(info, a), height=380, label_visibility="collapsed")
         b1, b2 = st.columns(2)
-        if b1.button("💾 Simpan sebagai prospek baharu", use_container_width=True, theme=None):
+        if b1.button("💾 Simpan sebagai prospek baharu", use_container_width=True):
             lead_id = db.add_lead(msg, info.to_dict(), cov["status"], a["estimate"].price if a["estimate"] else None,
                                   reply)
             st.session_state["last_lead"] = lead_id
             st.success(f"Disimpan sebagai prospek #{lead_id}.")
-        if b2.button("✅ Saya sudah hantar jawapan ini", type="primary", use_container_width=True, theme=None):
+        if b2.button("✅ Saya sudah hantar jawapan ini", type="primary", use_container_width=True):
             lead_id = st.session_state.get("last_lead") or db.add_lead(
                 msg, info.to_dict(), cov["status"], a["estimate"].price if a["estimate"] else None, reply)
             db.mark_replied(lead_id, reply, salesperson)
