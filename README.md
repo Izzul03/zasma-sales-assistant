@@ -2,6 +2,8 @@
 
 **Pembantu jualan untuk kontraktor bina rumah atas tanah sendiri.**
 
+**🔗 Cuba demo: https://zasma-sales.streamlit.app/**
+
 > ⚠️ **Projek peribadi / demo.** Ini bukan sistem rasmi ZASMA HOME. Harga dan senarai dokumen diambil daripada [Soalan Lazim awam ZASMA](https://zasmahome.com/soalan-lazim/) (diakses 16 Nov 2026). Semua mesej pelanggan dalam demo adalah **rekaan**.
 
 ## Masalah yang cuba diselesaikan
